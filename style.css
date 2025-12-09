@@ -125,11 +125,7 @@ body {
     margin: 0 auto;
 }
 
-@media (max-width: 968px) {
-    .hero-widgets {
-        grid-template-columns: 1fr;
-    }
-}
+
 
 .cta-button {
     display: inline-block;
@@ -659,26 +655,154 @@ footer {
     opacity: 0.7;
 }
 
-@media (max-width: 968px) {
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
 
-@media (max-width: 568px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-}
 
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.8rem 0;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .logo i {
+        font-size: 0.9rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 6rem 1rem 2rem;
+    }
+
+    .hero-content {
+        padding: 0 10px;
+    }
+
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-bottom: 0.6rem;
     }
     
     .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-weather {
+        margin-top: 2rem;
+    }
+
+    .hero-widgets {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .weather-widget,
+    .calendar-widget {
+        padding: 1.5rem;
+    }
+
+    .current-weather h3,
+    .forecast-section h3,
+    .calendar-widget h3 {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .weather-info {
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .weather-icon {
+        font-size: 3.5rem;
+    }
+
+    .temperature {
+        font-size: 2rem;
+    }
+
+    .condition {
+        font-size: 0.85rem;
+    }
+
+    .weather-extra {
+        padding-top: 1rem;
+    }
+
+    .weather-item span {
+        font-size: 11px;
+    }
+
+    .weather-item strong {
+        font-size: 1.1rem;
+    }
+    
+    .forecast-container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.4rem;
+    }
+
+    .forecast-day {
+        padding: 0.6rem 0.3rem;
+    }
+    
+    .day-icon {
+        font-size: 1.8rem;
+        margin: 0.3rem 0;
+    }
+
+    .day-name {
+        font-size: 10px;
+    }
+
+    .day-temp {
         font-size: 0.95rem;
+    }
+
+    .tour-select,
+    .date-picker,
+    .num-people {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .add-tour-button,
+    .book-button {
+        padding: 0.7rem 1.5rem;
+        font-size: 12px;
+    }
+
+    .selected-tours {
+        max-height: 120px;
+    }
+
+    .tour-item {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .destinations {
+        padding: 3rem 0;
+    }
+
+    .destinations h2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .gallery {
+        gap: 2rem;
     }
     
     .gallery-item {
@@ -686,19 +810,75 @@ footer {
     }
     
     .gallery-item img {
-        height: 250px;
+        height: 220px;
     }
-    
-    .nav-links {
-        gap: 1rem;
+
+    .gallery-caption {
+        padding: 1.2rem;
+        transform: translateY(0);
     }
-    
-    .forecast-container {
-        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+
+    .gallery-caption h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .tour-icons {
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .tour-info p {
+        font-size: 12px;
         gap: 0.5rem;
     }
-    
-    .day-icon {
-        font-size: 2rem;
+
+    .tour-info i {
+        font-size: 12px;
+    }
+
+    .tour-price {
+        font-size: 1.3rem !important;
+        margin-top: 0.8rem;
+        padding-top: 0.8rem;
+    }
+
+    .contact {
+        padding: 6rem 1rem;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-section h4 {
+        font-size: 0.95rem;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: 12px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+        line-height: 1.5;
     }
 }
