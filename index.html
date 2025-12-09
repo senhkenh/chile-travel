@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile Travel | Discover Puerto Montt & Los Lagos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><i class="fi fi-ss-star"></i> Chile-Travel</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Experience the Majesty of Puerto Montt</h1>
+            <p>Where Volcanoes Meet the Sea in Chilean Patagonia</p>
+            <div class="hero-weather">
+                <div class="hero-widgets">
+                    <div class="weather-widget">
+                        <div class="current-weather">
+                            <h3>Weather Now</h3>
+                            <div class="weather-info">
+                                <div class="weather-icon" id="weatherIcon">🌤️</div>
+                                <div class="weather-details">
+                                    <div class="temperature" id="temperature">--°C</div>
+                                    <div class="condition" id="condition">Loading...</div>
+                                </div>
+                            </div>
+                            <div class="weather-extra">
+                                <div class="weather-item">
+                                    <span>Humidity</span>
+                                    <strong id="humidity">--%</strong>
+                                </div>
+                                <div class="weather-item">
+                                    <span>Wind</span>
+                                    <strong id="wind">-- km/h</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="forecast-section">
+                            <h3>5-Day Forecast</h3>
+                            <div class="forecast-container" id="forecast">
+                                <div class="forecast-day"><div class="day-name">Loading...</div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calendar-widget">
+                        <h3>Book Your Tour</h3>
+                        <select id="tourSelect" class="tour-select">
+                            <option value="">Select a tour</option>
+                            <option value="osorno">Osorno Volcano Trek - $85</option>
+                            <option value="todoslossantos">Todos Los Santos Lake - $65</option>
+                            <option value="harbor">Harbor & Market Tour - $35</option>
+                            <option value="coast">Pacific Coast - $45</option>
+                            <option value="andean">Andean Peaks Hiking - $95</option>
+                            <option value="heritage">Heritage Walking Tour - $30</option>
+                            <option value="wilderness">Wilderness Safari - $75</option>
+                            <option value="kayaking">Lake District Kayaking - $55</option>
+                            <option value="viewpoint">Panoramic Viewpoint - $40</option>
+                            <option value="reserve">Nature Reserve Trek - $60</option>
+                            <option value="lakeside">Lakeside Relaxation - $50</option>
+                            <option value="patagonia">Patagonian Adventure - $120</option>
+                        </select>
+                        <input type="date" id="travelDate" class="date-picker">
+                        <input type="number" id="numPeople" class="num-people" min="1" value="1" placeholder="Number of people">
+                        <div class="selected-tours" id="selectedTours"></div>
+                        <button class="add-tour-button" id="addTour">Add Tour</button>
+                        <button class="book-button" id="bookNow">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Discover Our Destinations</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/Volcán_Osorno_y_lago_Llanquihue_desde_el_sector_Los_Riscos_2.jpg" alt="Osorno Volcano and Llanquihue Lake">
+                    <div class="gallery-caption">
+                        <h3>Osorno Volcano Trek</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-mountain" title="Mountain"></i>
+                            <i class="fi fi-ss-boot" title="Hiking boots required"></i>
+                            <i class="fi fi-ss-jacket" title="Warm jacket needed"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 8:00 AM - 6:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Andean condors, foxes, native shrubs</p>
+                            <p class="tour-price">$85 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Lago_todos_santos.jpg" alt="Todos Los Santos Lake">
+                    <div class="gallery-caption">
+                        <h3>Todos Los Santos Lake Tour</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-ship" title="Boat tour"></i>
+                            <i class="fi fi-ss-jacket" title="Jacket recommended"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 9:00 AM - 5:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Coigüe trees, black-necked swans, trout</p>
+                            <p class="tour-price">$65 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8430641304_aad7be3770_k.jpg" alt="Puerto Montt Harbor">
+                    <div class="gallery-caption">
+                        <h3>Harbor & Market Tour</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-fish" title="Seafood market"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 7:00 AM - 2:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Seagulls, sea lions, fresh seafood</p>
+                            <p class="tour-price">$35 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8189756886_f465483769_k.jpg" alt="Coastal Landscape">
+                    <div class="gallery-caption">
+                        <h3>Pacific Coast Exploration</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-boot" title="Walking shoes"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 10:00 AM - 4:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Pelicans, kelp forests, coastal flora</p>
+                            <p class="tour-price">$45 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8188469243_f94ea41854_k.jpg" alt="Mountain Views">
+                    <div class="gallery-caption">
+                        <h3>Andean Peaks Hiking</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-mountain" title="Mountain"></i>
+                            <i class="fi fi-ss-boot" title="Hiking boots required"></i>
+                            <i class="fi fi-ss-jacket" title="Warm clothing"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 7:00 AM - 7:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Pumas, huemul deer, lenga forests</p>
+                            <p class="tour-price">$95 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8993411762_f6fbc4d3ca_k.jpg" alt="Local Architecture">
+                    <div class="gallery-caption">
+                        <h3>Heritage Walking Tour</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-building" title="Architecture"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 10:00 AM - 1:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Urban gardens, historic sites</p>
+                            <p class="tour-price">$30 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8992183149_9370a6defb_k.jpg" alt="Natural Scenery">
+                    <div class="gallery-caption">
+                        <h3>Wilderness Safari</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-boot" title="Hiking boots"></i>
+                            <i class="fi fi-ss-jacket" title="Jacket needed"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 8:00 AM - 6:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Pudú deer, woodpeckers, alerce trees</p>
+                            <p class="tour-price">$75 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8758666063_67ec50213c_h.jpg" alt="Lake District">
+                    <div class="gallery-caption">
+                        <h3>Lake District Kayaking</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-ship" title="Water activity"></i>
+                            <i class="fi fi-ss-jacket" title="Waterproof jacket"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 9:00 AM - 3:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Ducks, native bamboo, volcanic rocks</p>
+                            <p class="tour-price">$55 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8430689692_21944f6e01_h.jpg" alt="Regional Views">
+                    <div class="gallery-caption">
+                        <h3>Panoramic Viewpoint Tour</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-mountain" title="Mountain views"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 11:00 AM - 5:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Eagles, native flowers, panoramic vistas</p>
+                            <p class="tour-price">$40 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/8429564979_1046b6d649_h.jpg" alt="Nature Reserve">
+                    <div class="gallery-caption">
+                        <h3>Nature Reserve Trek</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-boot" title="Hiking boots"></i>
+                            <i class="fi fi-ss-jacket" title="Jacket recommended"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 8:30 AM - 4:30 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Monito del monte, ferns, native orchids</p>
+                            <p class="tour-price">$60 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/7166491947_d02149bf32_h.jpg" alt="Waterfront">
+                    <div class="gallery-caption">
+                        <h3>Lakeside Relaxation</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-ship" title="Boat included"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 10:00 AM - 6:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Flamingos, water lilies, peaceful shores</p>
+                            <p class="tour-price">$50 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/pexels-eduardo-rivas-3074995-4665519.jpg" alt="Chilean Landscape">
+                    <div class="gallery-caption">
+                        <h3>Patagonian Adventure</h3>
+                        <div class="tour-icons">
+                            <i class="fi fi-ss-mountain" title="Mountain terrain"></i>
+                            <i class="fi fi-ss-boot" title="Hiking boots required"></i>
+                            <i class="fi fi-ss-jacket" title="Warm jacket essential"></i>
+                        </div>
+                        <div class="tour-info">
+                            <p><i class="fi fi-ss-clock"></i> 7:00 AM - 8:00 PM</p>
+                            <p><i class="fi fi-ss-leaf"></i> Guanacos, ñandú birds, Patagonian steppe</p>
+                            <p class="tour-price">$120 USD / person</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-overlay"></div>
+        <div class="container contact-content">
+            <h2>"The mountains are calling and I must go"</h2>
+            <p>Discover the untamed beauty of Chilean Patagonia</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Chile-Travel</h4>
+                    <p>Your gateway to authentic Patagonian experiences</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Tours & Excursions</a></li>
+                        <li><a href="#">Hotel Reservations</a></li>
+                        <li><a href="#">Restaurant Bookings</a></li>
+                        <li><a href="#">Transportation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Travel Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Chile-Travel Agency. Puerto Montt, Los Lagos, Chile. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
